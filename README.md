@@ -5,7 +5,7 @@
 <https://github.com/riptideio/pymodbus>
 
 ```bash
-pip install modbus
+pip install -U pymodbus
 ```
 
 ```bash
