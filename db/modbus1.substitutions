@@ -1,0 +1,24 @@
+global { P="$(IOCNAME)" }
+
+# asyn record for the underlying asyn octet port
+file "$(DB_TOP)/asynRecord.db" 
+{ 
+    pattern
+    {R,           PORT,      ADDR,   IMAX,    OMAX}
+    {OctetAsyn,   modbus1,        0,      80,      80}
+}
+
+# These are the A0 inputs done with bit access
+#file "$(DB_TOP)/bi_bit.template" 
+#{ 
+#    pattern
+#    {R,          PORT,         OFFSET,   ZNAM,   ONAM,  ZSV,       OSV,    SCAN}
+#    {BI0B,     A0_In_Bits,     0,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI1B,     A0_In_Bits,     1,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI2B,     A0_In_Bits,     2,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI3B,     A0_In_Bits,     3,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI4B,     A0_In_Bits,     4,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI5B,     A0_In_Bits,     5,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI6B,     A0_In_Bits,     6,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#    {BI7B,     A0_In_Bits,     7,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+#}
