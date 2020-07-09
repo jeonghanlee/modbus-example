@@ -2,4 +2,4 @@
 *.code-workspace
 *_PVs.list
 *.pyc
-
+*__pycache__*
