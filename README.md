@@ -47,5 +47,5 @@ epicsEnvSet("ELEMENT",  20)
 ## simulator
 
 ```
-ln -s /usr/bin/caja ~/bin/notepad.exe
+ln -s /usr/bin/pluma ~/bin/notepad.exe
 ```
