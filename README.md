@@ -43,3 +43,9 @@ epicsEnvSet("MOD_NAME", "A0_Out_Bits" )
 epicsEnvSet("FUNC_CODE", 5)
 epicsEnvSet("ELEMENT",  20)
 ```
+
+## simulator
+
+```
+ln -s /usr/bin/caja ~/bin/notepad.exe
+```
