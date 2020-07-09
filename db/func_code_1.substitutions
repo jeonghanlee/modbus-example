@@ -1,0 +1,47 @@
+global { P="$(PREF):", PORT="$(MODPORT)", ZSV=NO_ALARM, OSV=MAJOR, SCAN="I/O Intr" }
+
+## Signal Mapping based on 2 page of the example of MODBUS TCP/IP support by NTI 
+## NTI E-16D  :  4   Relay Outputs : for control of external devices. 
+## E-DI16DO16 : 16 Digital Outputs : 
+## E-DI16DO16 : 16 Digital Outputs : 
+
+file "$(DB_TOP)/bi_bit.template" 
+{ 
+pattern
+{OFFSET,                           R, ZNAM,     ONAM  }
+{     0, "BI$(OFFSET)B-RelayOutput1", Inactive, Active}
+{     1, "BI$(OFFSET)B-RelayOutput2", Inactive, Active}
+{     2, "BI$(OFFSET)B-RelayOutput3", Inactive, Active}
+{     3, "BI$(OFFSET)B-RelayOutput4", Inactive, Active}
+{     5, "BI$(OFFSET)B-RemoteDO1-02", Low,      High}
+{     6, "BI$(OFFSET)B-RemoteDO1-03", Low,      High}
+{     7, "BI$(OFFSET)B-RemoteDO1-04", Low,      High}
+{     8, "BI$(OFFSET)B-RemoteDO1-05", Low,      High}
+{     9, "BI$(OFFSET)B-RemoteDO1-06", Low,      High}
+{    10, "BI$(OFFSET)B-RemoteDO1-07", Low,      High}
+{    11, "BI$(OFFSET)B-RemoteDO1-08", Low,      High}
+{    12, "BI$(OFFSET)B-RemoteDO1-09", Low,      High}
+{    13, "BI$(OFFSET)B-RemoteDO1-10", Low,      High}
+{    14, "BI$(OFFSET)B-RemoteDO1-11", Low,      High}
+{    15, "BI$(OFFSET)B-RemoteDO1-12", Low,      High}
+{    16, "BI$(OFFSET)B-RemoteDO1-13", Low,      High}
+{    17, "BI$(OFFSET)B-RemoteDO1-14", Low,      High}
+{    18, "BI$(OFFSET)B-RemoteDO1-15", Low,      High}
+{    19, "BI$(OFFSET)B-RemoteDO1-16", Low,      High}
+{    20, "BI$(OFFSET)B-RemoteDO2-01", Low,      High}
+{    21, "BI$(OFFSET)B-RemoteDO2-02", Low,      High}
+{    22, "BI$(OFFSET)B-RemoteDO2-03", Low,      High}
+{    23, "BI$(OFFSET)B-RemoteDO2-04", Low,      High}
+{    24, "BI$(OFFSET)B-RemoteDO2-05", Low,      High}
+{    25, "BI$(OFFSET)B-RemoteDO2-06", Low,      High}
+{    26, "BI$(OFFSET)B-RemoteDO2-07", Low,      High}
+{    27, "BI$(OFFSET)B-RemoteDO2-08", Low,      High}
+{    28, "BI$(OFFSET)B-RemoteDO2-09", Low,      High}
+{    29, "BI$(OFFSET)B-RemoteDO2-10", Low,      High}
+{    30, "BI$(OFFSET)B-RemoteDO2-11", Low,      High}
+{    31, "BI$(OFFSET)B-RemoteDO2-12", Low,      High}
+{    32, "BI$(OFFSET)B-RemoteDO2-13", Low,      High}
+{    33, "BI$(OFFSET)B-RemoteDO2-14", Low,      High}
+{    34, "BI$(OFFSET)B-RemoteDO2-15", Low,      High}
+{    35, "BI$(OFFSET)B-RemoteDO2-16", Low,      High}
+}

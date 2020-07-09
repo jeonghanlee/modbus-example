@@ -1,24 +1,38 @@
-global { P="$(IOCNAME)" }
+global { P="$(IOCNAME)", PORT=$(PORTNAME) }
 
-# asyn record for the underlying asyn octet port
-file "$(DB_TOP)/asynRecord.db" 
+#These are the A0 inputs done with bit access
+file "$(DB_TOP)/bi_bit.template" 
 { 
     pattern
-    {R,           PORT,      ADDR,   IMAX,    OMAX}
-    {OctetAsyn,   modbus1,        0,      80,      80}
+{OFFSET,             R,  ZNAM,   ONAM,       ZSV,    OSV,  SCAN}
+{     0, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     1, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     2, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     3, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     4, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     5, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     6, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     7, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     8, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{     9, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    10, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    11, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    12, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    13, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    14, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+{    15, BI$(OFFFSET)B,   Low,   High,  NO_ALARM,  MAJOR,  "I/O Intr"}
 }
 
-# These are the A0 inputs done with bit access
-#file "$(DB_TOP)/bi_bit.template" 
-#{ 
-#    pattern
-#    {R,          PORT,         OFFSET,   ZNAM,   ONAM,  ZSV,       OSV,    SCAN}
-#    {BI0B,     A0_In_Bits,     0,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI1B,     A0_In_Bits,     1,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI2B,     A0_In_Bits,     2,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI3B,     A0_In_Bits,     3,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI4B,     A0_In_Bits,     4,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI5B,     A0_In_Bits,     5,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI6B,     A0_In_Bits,     6,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
-#    {BI7B,     A0_In_Bits,     7,        Low,    High,  NO_ALARM,  MAJOR,  "I/O Intr"}
+
+# These are the A0 outputs done with bit access.
+#file "$(DB_TOP)/bo_bit.template" { pattern
+#{R,             PORT,       OFFSET,   ZNAM,   ONAM}
+#{BO0B,     A0_Out_Bits,     0,        Low,    High}
+#{BO1B,     A0_Out_Bits,     1,        Low,    High}
+#{BO2B,     A0_Out_Bits,     2,        Low,    High}
+#{BO3B,     A0_Out_Bits,     3,        Low,    High}
+#{BO4B,     A0_Out_Bits,     4,        Low,    High}
+#{BO5B,     A0_Out_Bits,     5,        Low,    High}
+#{BO6B,     A0_Out_Bits,     6,        Low,    High}
+#{BO7B,     A0_Out_Bits,     7,        Low,    High}
 #}

@@ -1,0 +1,57 @@
+global { P="$(PREF):", PORT="$(MODPORT)", START_ADDR="$(STARTADDR)", ZNAM=Closed, ONAM=Open, ZSV=NO_ALARM, OSV=MAJOR, SCAN="I/O Intr" }
+
+
+
+## NTI E-16D 
+## Eight screw terminals pairs for connecting dry contact devices.
+## Input voltage: 0VDC to +25VDC.
+## Provides +12VDC, 50mA for terminals 1-7, and +12VDC, 350mA for terminal 8 only.
+## Fuse protection.
+
+
+file "$(DB_TOP)/bi_bit.template" 
+{ 
+pattern
+{OFFSET,              R}
+{     0, "BI$(OFFSET)B-DigitalInput1"}
+{     1, "BI$(OFFSET)B-DigitalInput2"}
+{     2, "BI$(OFFSET)B-DigitalInput3"}
+{     3, "BI$(OFFSET)B-DigitalInput4"}
+{     4, "BI$(OFFSET)B-DigitalInput5"}
+{     5, "BI$(OFFSET)B-DigitalInput6"}
+{     6, "BI$(OFFSET)B-DigitalInput7"}
+{     7, "BI$(OFFSET)B-DigitalInput8"}
+{     8, "BI$(OFFSET)B-RemoteDI1-01"}
+{     9, "BI$(OFFSET)B-RemoteDI1-02"}
+{    10, "BI$(OFFSET)B-RemoteDI1-03"}
+{    11, "BI$(OFFSET)B-RemoteDI1-04"}
+{    12, "BI$(OFFSET)B-RemoteDI1-05"}
+{    13, "BI$(OFFSET)B-RemoteDI1-06"}
+{    14, "BI$(OFFSET)B-RemoteDI1-07"}
+{    15, "BI$(OFFSET)B-RemoteDI1-08"}
+{    16, "BI$(OFFSET)B-RemoteDI1-09"}
+{    17, "BI$(OFFSET)B-RemoteDI1-10"}
+{    18, "BI$(OFFSET)B-RemoteDI1-11"}
+{    19, "BI$(OFFSET)B-RemoteDI1-12"}
+{    20, "BI$(OFFSET)B-RemoteDI1-13"}
+{    21, "BI$(OFFSET)B-RemoteDI1-14"}
+{    22, "BI$(OFFSET)B-RemoteDI1-15"}
+{    23, "BI$(OFFSET)B-RemoteDI1-16"}
+{    24, "BI$(OFFSET)B-RemoteDI2-01"}
+{    25, "BI$(OFFSET)B-RemoteDI2-02"}
+{    26, "BI$(OFFSET)B-RemoteDI2-03"}
+{    27, "BI$(OFFSET)B-RemoteDI2-04"}
+{    28, "BI$(OFFSET)B-RemoteDI2-05"}
+{    29, "BI$(OFFSET)B-RemoteDI2-06"}
+{    30, "BI$(OFFSET)B-RemoteDI2-07"}
+{    31, "BI$(OFFSET)B-RemoteDI2-08"}
+{    32, "BI$(OFFSET)B-RemoteDI2-09"}
+{    33, "BI$(OFFSET)B-RemoteDI2-10"}
+{    34, "BI$(OFFSET)B-RemoteDI2-11"}
+{    35, "BI$(OFFSET)B-RemoteDI2-12"}
+{    36, "BI$(OFFSET)B-RemoteDI2-13"}
+{    37, "BI$(OFFSET)B-RemoteDI2-14"}
+{    38, "BI$(OFFSET)B-RemoteDI2-15"}
+{    39, "BI$(OFFSET)B-RemoteDI2-16"}
+}
+
